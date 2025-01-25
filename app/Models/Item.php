@@ -11,8 +11,9 @@ class Item extends Model
 
     protected $fillable = ['name', 'category', 'year', 'image'];
 
-       public function getImageUrlAttribute()
+    public function getImageUrlAttribute()
     {
-        return asset('storage/' . $this->image);
+        // Mengacu ke folder public/images/
+        return asset('images/' . $this->image);
     }
 }

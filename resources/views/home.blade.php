@@ -16,7 +16,7 @@
         @foreach ($bestSellers as $item)
             <div class="col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="card mb-4 shadow-sm w-100">
-                    <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top" alt="{{ $item->name }}" style="height: 200px; object-fit: cover;">
+                    <img src="{{ $item->image_url }}" class="card-img-top" alt="{{ $item->name }}" style="height: 200px; object-fit: cover;">
                     <div class="card-body text-center">
                         <h5 class="card-title">{{ $item->name }}</h5>
                         <p class="card-text text-muted">{{ $item->category }} - {{ $item->year }}</p>
@@ -32,7 +32,7 @@
         @foreach ($items as $item)
             <div class="col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch">
                 <div class="card mb-4 shadow-sm w-100">
-                    <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top" alt="{{ $item->name }}" style="height: 200px; object-fit: cover;">
+                    <img src="{{ $item->image_url }}" class="card-img-top" alt="{{ $item->name }}" style="height: 200px; object-fit: cover;">
                     <div class="card-body text-center">
                         <h5 class="card-title">{{ $item->name }}</h5>
                         <p class="card-text text-muted">{{ $item->category }} - {{ $item->year }}</p>
